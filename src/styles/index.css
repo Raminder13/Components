@@ -12,6 +12,8 @@ body {
   font-size: 16px;
 }
 
+
+
 .header {
   height: 56px;
   width: 100%;
@@ -22,6 +24,21 @@ body {
   color: #fff;
   }
 
+  .container {
+    width: min(100% - 30px, 1200px);
+    margin-inline: auto;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header img {
+    height: 50px;
+    line-height: 56px;
+  }
+
   header nav {
     width: 100%;
     text-align: right;
@@ -29,16 +46,16 @@ body {
   
   nav ul {
     list-style: none;
+    line-height: 56px;
   }
   
   nav ul li{ 
     display: inline;
-    line-height: 60px;
     cursor: default;
   }
   
   nav ul li a {
-    font-size: 16px;
+    font-size: 12px;
     letter-spacing: 1px;
     color: #000;
     font-weight: bold;
@@ -63,15 +80,12 @@ body {
   align-items: center;
   height: 300px;
   text-align: center;
-  background-image: url('../components/original-c77e87fa69dfe8842c9af88db59b9afd.gif');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 h2 .title  {
   margin: 0;
-  font-size: 2rem;
-  color: #ce1c1c;
+  font-size: 42px;
+  color: #230707;
 }
 
 p .description {
@@ -122,28 +136,38 @@ p .description {
 }
 
   .gallery {
+    border-top: 1px solid #230707;
     display: flex;
-    background-color: #9fcbdd;
+    background-color: transparent;
     justify-content: center;
     align-items: center;
+    padding: 50px 0;
   }
   
   .gallery-img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     margin-top: 10px;
     margin: 0.5rem;
-    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.25s ease-in-out;
   }
   
+  .gallery-img:hover {
+    transform: scale(1.2);
+  }
+
   .footer {
     background-color: #b4ddee;
     color: #fff;
     height: 56px;
   }
   
+footer span {
+  line-height: 56px;
+}
+
   .copyright {
-    margin-top: 26px;
     text-align: center;
     color: #000;
   }
@@ -152,6 +176,7 @@ p .description {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-image: url('../components/original-c77e87fa69dfe8842c9af88db59b9afd.gif');
   }
   
   
