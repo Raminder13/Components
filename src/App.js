@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './styles/index.css';
+import Header from './components/Header';
+import Banner from './components/Banner';
+import Button from './components/Button';
+import Gallery from './components/Gallery';
+import Footer from './components/Footer';
 
 function App() {
+  const images = [
+    'https://picsum.photos/id/20/200/300',
+    'https://picsum.photos/id/48/200/300',
+    'https://picsum.photos/id/60/200/300',
+    'https://picsum.photos/id/94/200/300',
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header />
+      <Banner
+        primaryButton={<Button type="primary-btn" text="Click me" />}
+        secondaryButton={<Button type="secondary-btn" text="Learn More" />}
+      />
+      <div className="container">
+        <Gallery images={images} />
+      </div>
+      <Footer />
     </div>
   );
 }
